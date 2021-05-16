@@ -2,6 +2,11 @@ const container = document.querySelector('.container');
 var inputValue = document.querySelector('.input');
 const add = document.querySelector('.add');
 
+
+fetch('https://jsonplaceholder.typicode.com/todos')
+  .then(response => response.json())
+  .then(json => console.log(json))
+
 //storing custom list in users' browser using local storage
 if(window.localStorage.getItem("todos") == undefined){
      var todos = [];
